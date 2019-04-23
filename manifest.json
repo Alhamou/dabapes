@@ -1,0 +1,33 @@
+{
+    "manifest_version" : 2,
+    "name" : "Dabapes",
+    "version" : "0.1",
+
+    "page_action": {
+        "default_title": "Dabapes Extension",
+        "default_icon": "imgs/icon.png"
+    },
+
+    "background" : {
+        "scripts": ["src/jquery.3.4.0.min.js", "background.js"],
+        "persistent" : false
+    },
+
+    "content_scripts": [{
+        "matches": [ "<all_urls>" ],
+        "js": [ "src/jquery.3.4.0.min.js", "content.js" ]
+    }],
+    
+
+    "icons": {
+    "16": "imgs/icon.png",
+    "32": "imgs/icon.png",
+    "48": "imgs/icon.png",
+    "128": "imgs/icon.png"
+    },
+
+
+    "permissions": [
+        "contextMenus"
+    ]
+}
